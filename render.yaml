@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pretoria-sunnyside-game
+    runtime: static
+    buildCommand: echo "Static 3D game"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600

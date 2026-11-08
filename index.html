@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101310">
+  <title>Pretoria Sunnyside | Open World</title>
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="loading"><img src="./assets/logo.svg" alt="Pretoria Sunnyside"><p>LOADING SUNNYSIDE</p><small>Building the city…</small></div>
+  <header id="topbar">
+    <img src="./assets/logo.svg" alt="Pretoria Sunnyside logo">
+    <div class="location"><b>SUNNYSIDE</b><small>PRETORIA • GAUTENG</small></div>
+    <div class="cash"><small>CASH</small><b id="cash">R 2,500</b></div>
+  </header>
+  <aside id="mission">
+    <span class="eyebrow">CURRENT OBJECTIVE</span>
+    <b id="mission-title">Explore Sunnyside</b>
+    <p id="mission-text">Walk around the neighbourhood and discover the city.</p>
+    <div class="mission-progress"><i id="progress"></i></div>
+  </aside>
+  <div id="status">
+    <span>♥ <b id="health">100</b></span>
+    <span>⚡ <b id="stamina">100</b></span>
+    <span>★ <b id="wanted">0</b></span>
+  </div>
+  <div id="toast" role="status"></div>
+  <div id="crosshair">+</div>
+  <div id="prompt">WASD move · E interact · F enter/exit vehicle</div>
+  <div id="mobile-controls">
+    <div class="dpad">
+      <button data-key="w">▲</button>
+      <div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div>
+    </div>
+    <div class="mobile-actions">
+      <button data-action="sprint">RUN</button><button data-action="interact">E</button><button data-action="vehicle">CAR</button>
+    </div>
+  </div>
+  <div id="help">
+    <button id="help-close">×</button>
+    <h2>WELCOME TO SUNNYSIDE</h2>
+    <p>Explore a playable 3D neighbourhood inspired by Pretoria, South Africa.</p>
+    <div class="keyrow"><kbd>W A S D</kbd> Move</div>
+    <div class="keyrow"><kbd>SHIFT</kbd> Sprint</div>
+    <div class="keyrow"><kbd>MOUSE</kbd> Look around</div>
+    <div class="keyrow"><kbd>F</kbd> Enter / exit car</div>
+    <div class="keyrow"><kbd>E</kbd> Interact with nearby places</div>
+    <div class="keyrow"><kbd>SPACE</kbd> Jump / handbrake</div>
+    <p class="note">On mobile, use the on-screen controls. This is an early playable prototype; map data loads from OpenStreetMap when available.</p>
+    <button id="start" class="primary">START EXPLORING</button>
+  </div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
